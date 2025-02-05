@@ -55,7 +55,7 @@ reset.addEventListener("click",function(){
 
     minCounter = 0;
     min.innerHTML = minCounter;
-    
+
     hrsCounter = 0;
     hrs.innerHTML = hrsCounter;
 
@@ -64,3 +64,5 @@ reset.addEventListener("click",function(){
     reset.disabled = true
 
 })
+
+
