@@ -31,7 +31,7 @@ start.addEventListener("click", function(){
             hrs.innerHTML = hrsCounter;
             minCounter = 00;
         }
-    },10);
+    },1000);
 
     start.disabled = true
     stopBtn.disabled = false
