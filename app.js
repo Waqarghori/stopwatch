@@ -25,3 +25,6 @@ function start() {
         }
     }, 10)
 }
+function stop(){
+    
+}
