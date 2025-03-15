@@ -85,14 +85,20 @@ h2{
 }
 
 @media (max-width: 400px) {
+    html{
+        margin: 0px;
+        padding: 0px;
+    }
     .main {
         width: 98%;
         padding: 10px;
         border-radius: 10px;
+        box-shadow: none;
     }
     .digits {
         font-size: 1.2em;
         gap: 5px;
+        width: 90%;
     }
     button {
         width: 100%;
