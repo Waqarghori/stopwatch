@@ -91,9 +91,9 @@ h2{
     }
     .main {
         width: 98%;
-        padding: 10px;
+        padding: 0px;
         border-radius: 10px;
-        box-shadow: none;
+        /* box-shadow: none; */
     }
     .digits {
         font-size: 1.2em;
