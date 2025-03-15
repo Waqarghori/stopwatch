@@ -44,5 +44,5 @@ function reset(){
     sec.innerHTML = jsSec;
     min.innerHTML = jsMin;
     hour.innerHTML = jsHour;
-
 }
+
