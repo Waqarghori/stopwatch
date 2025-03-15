@@ -4,20 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Stopwatch</title>
+    <title>Document</title>
+
 </head>
 <body>
-    
-    <div id="time">
-        <span id="hrs">00</span>:<span id="min">00</span>:<span id="sec">00</span>:<span id="mSec">00</span>
-    </div>
-    
-    <div id="buttons">
-        <button id="start">Start</button>
-        <button id="stopBtn">Stop</button>
-        <button id="reset">Reset</button>
-    </div>
+    <div class="main">
+        <h1>Stopwatch</h1>
+        <h2 id="hour">0</h2>
+        <h2 id="min">0</h2>
+        <h2 id="sec">0</h2>
 
+        <br><br>
+        <button id="btn" onclick="start()">Start</button>
+        <button onclick="stop()">Stop</button>
+        <button onclick="reset()">Reset</button>
+
+    </div>
+    
     <script src="app.js"></script>
 </body>
 </html>
