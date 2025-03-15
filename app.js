@@ -8,32 +8,32 @@ let min = document.getElementById("min");
 let sec = document.getElementById("sec");
 
 let interval ;
-document.getElementById("stop-btn").disabled = true
+document.getElementById("stop-btn").style.visibility = "hidden"
 
 function start() {
    interval = setInterval(function () {
         {
             jsSec++
-            sec.innerHTML = `Seconds: ${jsSec}`;
+            sec.innerHTML = `${jsSec}`;
             if (jsSec >= 59) {
                 jsMin++
-                min.innerHTML = `Minutes: ${jsMin}`
+                min.innerHTML = `${jsMin}`
                 jsSec = 0;
             }else if(jsMin >= 9){
                 jsHour++
-                hour.innerHTML = `Hours: ${jsHour}`;
+                hour.innerHTML = `${jsHour}`;
                 jsMin = 0
             }
         }
-        document.getElementById("start-btn").disabled = true
-        document.getElementById("stop-btn").disabled = false
+        document.getElementById("start-btn").style.visibility = "hidden";
+        document.getElementById("stop-btn").style.visibility = "visible"
 
     }, 10)
 }
 function stop(){
     clearInterval(interval)
-    document.getElementById("start-btn").disabled = false
-    document.getElementById("stop-btn").disabled = true
+    document.getElementById("start-btn").style.visibility = "visible"
+    document.getElementById("stop-btn").style.visibility = "hidden"
 }
 
 function reset(){
@@ -44,7 +44,6 @@ function reset(){
     sec.innerHTML = jsSec;
     min.innerHTML = jsMin;
     hour.innerHTML = jsHour;
-    document.getElementById("stop-btn").disabled = true
-    document.getElementById("start-btn").disabled = false
-
+    document.getElementById("start-btn").style.visibility = "visible"
+    document.getElementById("stop-btn").style.visibility = "hidden"
 }
