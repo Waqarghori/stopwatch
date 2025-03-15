@@ -83,3 +83,21 @@ h2{
         font-size: 0.9em;
     }
 }
+
+@media (max-width: 400px) {
+    .main {
+        width: 98%;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    .digits {
+        font-size: 1.2em;
+        gap: 5px;
+    }
+    button {
+        width: 100%;
+        height: 35px;
+        font-size: 0.85em;
+        margin: 5px 0;
+    }
+}
