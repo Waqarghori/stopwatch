@@ -68,3 +68,60 @@ function reset() {
     // document.getElementById("stop-btn").outerHTML = `<button id="start-btn" onclick="start()">Start</button>`
 }
 
+
+let jsHourT = 0;
+let jsMinT = 5;
+let jsSecT = 59;
+
+let hourT = document.getElementById("hourT");
+let minT = document.getElementById("minT");
+let secT = document.getElementById("secT");
+
+secT.innerHTML = jsSecT;
+minT.innerHTML = jsMinT;
+hourT.innerHTML = jsHourT;
+
+
+
+let timmerInterval ;
+function startT() {
+
+ timmerInterval = setInterval(function () {
+        jsSecT--
+        secT.innerHTML = jsSecT;
+        if (jsSecT == 0) {
+            jsMinT--
+            minT.innerHTML = jsMinT;
+            jsSecT = 59;
+        }
+        if (jsMinT == 0) {
+            jsHourT--
+            hourT.innerHTML = jsHourT;
+            jsMinT = 59;
+        }
+    }, 1000)
+
+    let startT = document.getElementById("start-btnT")
+    startT.innerHTML = "Pause"
+    startT.setAttribute("onclick", "pauseT()")
+}
+
+function pauseT() {
+    clearInterval(timmerInterval)
+    let startT = document.getElementById("start-btnT")
+    startT.innerHTML = "Start"
+    startT.setAttribute("onclick","startT()")
+}
+
+function resetT() {
+    clearInterval(timmerInterval)
+    jsHourT = "00";
+    jsMinT = "00";
+    jsSecT = "00";
+    secT.innerHTML = jsSecT;
+    minT.innerHTML = jsMinT;
+    hourT.innerHTML = jsHourT;
+    let startT = document.getElementById("start-btnT")
+    startT.innerHTML = "Start"
+    startT.setAttribute("onclick","startT()")
+}
