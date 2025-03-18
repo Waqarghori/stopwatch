@@ -105,8 +105,9 @@ h2{
         /* box-shadow: none; */
     }
     .digits {
-        font-size: 1.2em;
-        gap: 5px;
+        padding: 0px;
+        font-size: 1em;
+        gap: 0px;
         width: 90%;
     }
     button {
