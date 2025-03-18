@@ -59,6 +59,12 @@ function reset() {
     sec.innerHTML = jsSec;
     min.innerHTML = jsMin;
     hour.innerHTML = jsHour;
-     document.getElementById("stop-btn").outerHTML = `<button id="start-btn" onclick="start()">Start</button>`
+    let startBtn = document.getElementById("start-btn");
+    if (startBtn) {
+        startBtn.innerHTML = "Start";
+        startBtn.setAttribute("onclick", "start()");
+        startBtn.id = "start-btn";
+    }
+    // document.getElementById("stop-btn").outerHTML = `<button id="start-btn" onclick="start()">Start</button>`
 }
 
